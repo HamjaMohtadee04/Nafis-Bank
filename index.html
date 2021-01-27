@@ -19,11 +19,58 @@
         <button id="login" class="btn btn-warning" >ENTER</button>
     </div>
 </div>
+<div id="transaction-area">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="deposit status">
+                <h2>Deposit</h2>
+            <h5>$<span class="currentDeposite">00</span></h5>
+            </div> 
+        </div>
+        <div class="col-md-4">
+            <div class="withdraw status">
+                <h2>Withdraw</h2>
+                <h5>$00</h5>
+            </div>
+           
+        </div>
+        <div class="col-md-4">
+            <div class="Balance status">
+                <h2>Balance</h2>
+                <h5>$1200</h5>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+           <div class="submit-area">
+            <h4>Deposit</h4>
+            <input id="depostiteAmount" type="text" class="form-control" placeholder="$amount you want to deposite">
+            <br>
+            <button id="addDeposit" class="btn btn-success">Deposit</button>
+           </div>
+        </div>
+        <div class="col-md-6">
+          <div class="submit-area">
+            <h4>withdraw</h4>
+            <input type="text" class="form-control" placeholder="$amount you want to withdraw">
+            <br>
+            <button class="btn btn-success">withdraw</button>
+          </div>
+        </div>
+    </div>
+</div>
    <script>
+       //login button hansdler;
        const loginBtn = document.getElementById("login");
             loginBtn.addEventListener("click",function(){
                 console.log("user just click");
+                const loginArea =document.getElementById("login-area");
+                    loginArea.style.display="none";
+                    const transactionArea=document.getElementById("transaction-area");
+                    transactionArea.style.display="block";
             })
-   </script>
+            //deposite button handler;
+        </script>
 </body>
 </html>
